@@ -1,0 +1,126 @@
+html, body,h1,h2,p,ul {
+    margin:0;
+    padding:0;}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    background-color:#faf6ee;
+}
+* {
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1440px;
+    /* padding: 0 15px;
+    margin: 0 auto; *//*как лучше задавать margin для контейнера, прочитала что лучше способом, который я оставила (ниже), если задать нули вверху и низу, потом могут быть сбои, если потом их где-то буду использовать? Так это?какой способ лучше использовать? */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.nav-list {
+    display:flex;
+}
+.backet_and_search{
+    display: flex;
+    align-items: center;
+}
+.nav-item a, .button_search a {
+    color: #080808;
+    background-image: linear-gradient(currentColor, currentColor);/* линейный градиент генерирует изображени, currentColor указывает браузеру использовать цвет элемента из свойства color*/
+    background-position: 0% 100%; /*для размещения изображения в левом нижнем углу.*/
+    background-repeat: no-repeat;/*предотвратить создание нескольких экземпляров изображения.*/
+    background-size: 0% 2px; /*указываем нулевую ширину и высоту в два пикселя. Нулевая ширина означает, что подчёркивание появится только при наведении, иначе картинка не видна.*/
+    transition: background-size .5s; /*Устанавливаем transition по размеру фона, так что любое изменение свойства займет 0.5 секунды.*/
+}
+/* .nav-item a:visited, .button_search a:visited {
+    color: #5a5858;} */
+.nav-item a:hover, .button_search a:hover {
+    color: #f1c207;
+    background-size: 100% 2px; /*При наведении на ссылку меняем ширину изображения на 100%  создавая полное подчёркивание, а transition обеспечивает анимацию.*/
+}
+.header{
+        border-bottom: 1px solid #111010;
+}
+
+.main-title, .title_2,
+.button_studio_tour, .button_search, .nav-list {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.nav-item a, .button_search a {
+    text-decoration: none;
+    font-size: 16px;
+}
+.nav-item {
+    list-style-type: none;
+    padding: 23px 52px 25px 0;
+}
+.button_search {
+    padding: 23px 32px 25px 0;
+}
+.backet{
+    padding: 23px 0 25px;
+}
+.container_1{
+    position: relative;
+    max-width: 1440px;
+    /* padding: 0 15px; */ /*В контейнере всегда должны быть padding, ил можно не добавлять? Просто когда добавляю, отсупы получаются поверх картинки, как то можно сделать, чтобы были от краев картинки? Во втором контейнере отступы идут от текста, так же бы хотелось сделать сдесь чтобы отступы шли от img */
+    margin: 4px auto 80px;
+    background-image: url('../assets/image/main.png');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+}
+.main-title {
+    color: #ffffff;
+    font-size: calc(6px + 5vw);
+    padding: 53px 0 252px 65px;
+    text-transform: uppercase;
+}
+.button_studio_tour {
+    position: absolute;
+    background-color: #ffdb5b;
+    font-size: calc(2px + 1vw);
+    border-radius: 50px;
+    border: 0.01px solid;
+    padding: 1% 2%;
+    left: 65px;
+    bottom: 67px;
+
+}
+.button_studio_tour a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 18px;
+    color: #111010;
+
+}
+.button_down{
+    position: absolute;
+    right: 60px;
+    bottom: -64px;
+}
+.button_studio_tour:hover{
+    background-color: #e7d0a1;
+    transform: scale(0.9);
+}
+
+.container_2 {
+    max-width: 1440px;
+    padding: 0 15px;
+    margin: auto;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+}
+b:first-child{
+    color: #f1c207;
+}
